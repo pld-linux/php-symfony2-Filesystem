@@ -4,12 +4,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Symfony2 Filesystem Component
 Name:		php-symfony2-Filesystem
-Version:	2.1.4
+Version:	2.1.6
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	b4ac31843a96ec8af863c47146869539
+# Source0-md5:	813fb52989c372f931255567f382c144
 URL:		http://symfony.com/doc/current/components/filesystem.html
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
