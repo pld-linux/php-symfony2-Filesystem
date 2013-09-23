@@ -1,15 +1,14 @@
-%define		status		stable
 %define		pearname	Filesystem
 %define		php_min_version 5.3.3
 %include	/usr/lib/rpm/macros.php
-Summary:	%{pearname} - Symfony2 Filesystem Component
+Summary:	Symfony2 Filesystem Component
 Name:		php-symfony2-Filesystem
-Version:	2.1.6
-Release:	2
+Version:	2.3.4
+Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	813fb52989c372f931255567f382c144
+# Source0-md5:	e8fdc3073a6d3e7c492072bc60d2f2fc
 URL:		http://symfony.com/doc/current/components/filesystem.html
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
@@ -23,20 +22,16 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Symfony2 Filesystem Component
-
-In PEAR status of this package is: %{status}.
+The Filesystem components provides basic utilities for the filesystem.
 
 %prep
 %pear_package_setup
 
 # no packaging of tests
-rm -r .%{php_pear_dir}/Symfony/Component/%{pearname}/Tests
-rm .%{php_pear_dir}/Symfony/Component/%{pearname}/phpunit.xml.dist
+mv .%{php_pear_dir}/Symfony/Component/%{pearname}/Tests .
+mv .%{php_pear_dir}/Symfony/Component/%{pearname}/phpunit.xml.dist .
 
 # fixups
-mv .%{php_pear_dir}/Symfony/Component/%{pearname}/CHANGELOG.md .
-rm .%{php_pear_dir}/Symfony/Component/%{pearname}/.gitattributes
 mv docs/%{pearname}/Symfony/Component/%{pearname}/* .
 
 %install
