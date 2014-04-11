@@ -3,19 +3,20 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 Filesystem Component
 Name:		php-symfony2-Filesystem
-Version:	2.3.4
+Version:	2.4.3
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	e8fdc3073a6d3e7c492072bc60d2f2fc
-URL:		http://symfony.com/doc/current/components/filesystem.html
+# Source0-md5:	dbf64e0c15951f4a3a768d613e52aacd
+URL:		http://symfony.com/doc/2.4/components/filesystem.html
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
 Requires:	php(core) >= %{php_min_version}
 Requires:	php(ctype)
+Requires:	php(spl)
 Requires:	php-channel(pear.symfony.com)
 Requires:	php-pear >= 4:1.3.10
 BuildArch:	noarch
