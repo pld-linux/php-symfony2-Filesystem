@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 Filesystem Component
 Name:		php-symfony2-Filesystem
-Version:	2.7.5
+Version:	2.7.7
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{version}.tar.gz
-# Source0-md5:	c0f2a615b6fe8a187a1f6bdcbad7152f
+# Source0-md5:	f8baa901616347656d258ae26f5a98f4
 URL:		http://symfony.com/doc/2.7/components/filesystem.html
 BuildRequires:	phpab
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -27,7 +27,7 @@ The Filesystem components provides basic utilities for the filesystem.
 %setup -q -n filesystem-%{version}
 
 %build
-phpab -n -e '*/Tests/*' -o autoloader.php .
+phpab -n -e '*/Tests/*' -o autoload.php .
 
 %install
 rm -rf $RPM_BUILD_ROOT
