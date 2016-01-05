@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 Filesystem Component
 Name:		php-symfony2-Filesystem
-Version:	2.7.7
+Version:	2.7.8
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{version}.tar.gz
-# Source0-md5:	f8baa901616347656d258ae26f5a98f4
+# Source0-md5:	009a938b46892b7696f10267401099ac
 URL:		http://symfony.com/doc/2.7/components/filesystem.html
 BuildRequires:	phpab
 BuildRequires:	rpmbuild(macros) >= 1.610
